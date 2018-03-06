@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class CreateContactAcitivity extends Activity {
+public class CreateBusinessAcitivity extends Activity {
 
     private Button submitButton;
     private EditText nameField, businessNumberField, addressField, primaryBusinessField, provinceField;
