@@ -16,7 +16,7 @@ public class Business implements Serializable {
 
     public  String businessNumber;
     public  String name;
-    public  String primaryBusniess;
+    public  String primaryBusiness;
     public  String address;
     public  String province;
 
@@ -28,7 +28,7 @@ public class Business implements Serializable {
     public Business(String businessID, String businessNumber, String name, String primaryBusiness, String address, String province){
         this.businessNumber = businessNumber;
         this.name = name;
-        this.primaryBusniess = primaryBusiness;
+        this.primaryBusiness = primaryBusiness;
         this.address = address;
         this.province = province;
     }
@@ -38,7 +38,7 @@ public class Business implements Serializable {
         HashMap<String, Object> result = new HashMap<>();
         result.put("businessNumber", businessNumber);
         result.put("name", name);
-        result.put("primaryBusiness", primaryBusniess);
+        result.put("primaryBusiness", primaryBusiness);
         result.put("address", address);
         result.put("province", province);
 
