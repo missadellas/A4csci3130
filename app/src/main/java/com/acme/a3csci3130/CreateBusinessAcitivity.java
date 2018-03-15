@@ -36,19 +36,24 @@ public class CreateBusinessAcitivity extends Activity {
      */
     public void submitInfoButton(View v) {
         //each entry needs a unique ID
-        String businessID = appState.firebaseReference.push().getKey();
-        String businessNumber = businessNumberField.getText().toString();
-        String name = nameField.getText().toString();
-        String primaryBusiness = primaryBusinessField.getText().toString();
-        String address = addressField.getText().toString();
-        String province = provinceField.getText().toString();
+        if (appState.firebaseReference != null){
+            String businessID = appState.firebaseReference.push().getKey();
+            String businessNumber = businessNumberField.getText().toString();
+            String name = nameField.getText().toString();
+            String primaryBusiness = primaryBusinessField.getText().toString();
+            String address = addressField.getText().toString();
+            String province = provinceField.getText().toString();
 
 
-        Business business = new Business(businessID,businessNumber, name, primaryBusiness,address,province);
+            Business business = new Business(businessID,businessNumber, name, primaryBusiness,address,province);
 
-        appState.firebaseReference.child(businessID).setValue(business);
+            appState.firebaseReference.child(businessID).setValue(business);
 
-        finish();
+            finish();
+        }
+
+
+
 
     }
 }

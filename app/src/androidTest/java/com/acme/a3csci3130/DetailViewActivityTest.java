@@ -25,8 +25,6 @@ public class DetailViewActivityTest {
     public ActivityTestRule<DetailViewActivity> ActivityRule =
             new ActivityTestRule<>(DetailViewActivity.class);
 
-    public IntentsTestRule<DetailViewActivity> intentsTestRule =
-            new IntentsTestRule<>(DetailViewActivity.class);
     public ActivityTestRule<MainActivity> mActivityTestRule=
             new ActivityTestRule<>(MainActivity.class,false,false);
     
