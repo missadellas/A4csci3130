@@ -29,6 +29,11 @@ public class CreateBusinessAcitivity extends Activity {
 
     }
 
+
+    /**
+     * @param v button to set the listener on
+     this method submits business info to the firebase database
+     */
     public void submitInfoButton(View v) {
         //each entry needs a unique ID
         String businessID = appState.firebaseReference.push().getKey();
@@ -37,6 +42,7 @@ public class CreateBusinessAcitivity extends Activity {
         String primaryBusiness = primaryBusinessField.getText().toString();
         String address = addressField.getText().toString();
         String province = provinceField.getText().toString();
+
 
         Business business = new Business(businessID,businessNumber, name, primaryBusiness,address,province);
 

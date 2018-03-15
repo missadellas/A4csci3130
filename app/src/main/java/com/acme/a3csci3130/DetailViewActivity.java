@@ -40,13 +40,15 @@ public class DetailViewActivity extends Activity {
         }
     }
 
+    /**
+     * @param v button to set listener too
+     *          this method updates the information of current business contacts
+     *          and switches back to the main activity
+     */
     public void updateBusiness(View v){
         //TODO: Update Business funcionality
 
-
         String businessNumber = businessNumberField.getText().toString();
-
-
 
         ref.child("Business").orderByChild("businessNumber").equalTo(businessNumber).addListenerForSingleValueEvent(
 
@@ -79,7 +81,11 @@ public class DetailViewActivity extends Activity {
         Intent intent=new Intent(this,MainActivity.class);
         startActivity(intent);
     }
-
+    /**
+     * @param v button to set listener too
+     *          this method deletes the information of current business contacts
+     *          and switches back to the main activity
+     */
     public void eraseBusiness(View v)
     {
         //TODO: Erase Business functionality
